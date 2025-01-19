@@ -1,0 +1,260 @@
+/* Tasks Container */
+.tasks-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.tasks-title {
+  font-size: 2.5rem;
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Controls Section */
+.tasks-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-buttons button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-controls label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sort-controls select,
+.sort-controls button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-controls button:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+/* Tasks List */
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+}
+
+/* Task Info */
+.task-info {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.task-info h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.task-info p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.task-info span {
+  font-size: 0.9rem;
+  color: #999;
+  display: block;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.task-actions button.edit {
+  background-color: #0288d1;
+  color: white;
+}
+
+.task-actions button.edit:hover {
+  background-color: #0277bd;
+}
+
+.task-actions button.complete {
+  background-color: #4caf50;
+  color: white;
+}
+
+.task-actions button.complete:hover {
+  background-color: #388e3c;
+}
+
+.task-actions button.delete {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.task-actions button.delete:hover {
+  background-color: #c62828;
+}
+
+/* Edit Popup */
+.edit-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.edit-popup-content h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-popup-content label {
+  font-weight: bold;
+}
+
+.edit-popup-content input,
+.edit-popup-content textarea,
+.edit-popup-content select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-popup-content button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-popup-content button:hover {
+  background-color: #388e3c;
+}
+
+.edit-popup-content .cancel {
+  background-color: #d32f2f;
+}
+
+.edit-popup-content .cancel:hover {
+  background-color: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tasks-controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-info {
+    margin-bottom: 10px;
+  }
+
+  .edit-popup-content {
+    width: 90%;
+  }
+}

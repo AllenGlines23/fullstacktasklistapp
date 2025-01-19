@@ -1,0 +1,174 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App Container */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #c8e6c9;
+}
+
+/* Buttons */
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* Forms */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Links */
+a {
+  color: #4caf50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #388e3c;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #c8e6c9;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 0.5rem 0;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input, textarea, select {
+    font-size: 0.9rem;
+  }
+}

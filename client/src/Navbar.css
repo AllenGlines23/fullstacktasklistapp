@@ -1,0 +1,95 @@
+/* Navbar Container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #388e3c;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Inner Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Title */
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Links Section */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto; /* Push links to the far right */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.navbar-link.active {
+  background-color: #1b5e20;
+  color: white;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #4caf50;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

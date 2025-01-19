@@ -1,0 +1,12 @@
+/* App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Ensures the main content area grows to push the footer down */
+  padding: 2rem;
+  background-color: var(--background-color, #f9f9f9);
+}
