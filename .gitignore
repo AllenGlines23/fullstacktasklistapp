@@ -1,0 +1,58 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Debugging output
+*.swp
+*.swo
+.vscode/
+
+# Dependency directories
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+dist/
+build/
+client/build/
+client/dist/
+
+# Cache files
+.cache/
+tmp/
+temp/
+
+# IDE specific
+.DS_Store
+.idea/
+*.iml
+
+# Coverage reports
+coverage/
+
+# Production files
+client/.env.production
+server/.env.production
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Miscellaneous
+*.bak
+*.pid
+*.seed
+*.log
+*.gz
+*.sql
