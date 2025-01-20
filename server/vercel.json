@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/(.*)",    // Routes matching `/api/*`
+      "dest": "/api/$1"      // Redirects to corresponding serverless function
+    }
+  ],
+  "builds": [
+    {
+      "src": "api/**/*.js",  // Specifies all JavaScript files in the `api` folder
+      "use": "@vercel/node"  // Indicates the use of Node.js for serverless functions
+    }
+  ]
+}
