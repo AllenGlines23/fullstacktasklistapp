@@ -1,0 +1,33 @@
+{
+  "name": "Task Manager API",
+  "description": "Backend API for the Task Manager application.",
+  "version": "1.0.0",
+  "apiVersion": "v1",
+  "basePath": "/api",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/tasks",
+      "description": "Retrieve all tasks."
+    },
+    {
+      "method": "POST",
+      "path": "/tasks",
+      "description": "Create a new task."
+    },
+    {
+      "method": "PUT",
+      "path": "/tasks/:id",
+      "description": "Update an existing task by ID."
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/:id",
+      "description": "Delete a task by ID."
+    }
+  ],
+  "environment": {
+    "DB_URI": "Set this in environment variables",
+    "NODE_ENV": "Set to production for live environments"
+  }
+}
