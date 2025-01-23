@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { TaskProvider } from "./TaskContext"; // Import TaskProvider for context
+import { TaskProvider } from "./TaskContext"; // Ensure TaskProvider is correctly implemented
 import Dashboard from "./Dashboard";
 import Tasks from "./Tasks";
 import Home from "./Home";
@@ -25,9 +25,18 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> }, // Default route for "/"
       { path: "dashboard", element: <Dashboard /> }, // Relative path for child routes
       { path: "tasks", element: <Tasks /> },
+      { path: "*", element: <NotFound /> }, // Handle 404 routes
     ],
   },
 ]);
+
+// NotFound Component for invalid routes
+const NotFound = () => (
+  <div style={{ textAlign: "center", marginTop: "2rem" }}>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you are looking for does not exist.</p>
+  </div>
+);
 
 // Render the application
 const root = ReactDOM.createRoot(document.getElementById("root"));
