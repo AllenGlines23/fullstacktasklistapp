@@ -4,7 +4,6 @@
   "private": true,
   "description": "A React frontend for managing tasks with advanced features like analytics and themes.",
   "main": "src/index.js",
-  "homepage": "https://allenglines23.github.io/fullstacktasklistapp",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
