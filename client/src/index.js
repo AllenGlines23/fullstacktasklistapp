@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { TaskProvider } from "./TaskContext"; // Import TaskProvider for context
-import App from "./App";
 import Dashboard from "./Dashboard";
 import Tasks from "./Tasks";
 import Home from "./Home";
@@ -18,25 +17,17 @@ const Layout = () => (
 );
 
 // Define routes for the application
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Layout />, // Wrap child routes with Layout containing Navbar
-      children: [
-        { path: "/home", element: <Home /> },
-        { path: "/dashboard", element: <Dashboard /> },
-        { path: "/tasks", element: <Tasks /> },
-      ],
-    },
-  ],
+const router = createBrowserRouter([
   {
-    future: {
-      v7_startTransition: true, // Enable startTransition for smoother updates
-      v7_relativeSplatPath: true, // Adjust relative path resolution in splat routes
-    },
-  }
-);
+    path: "/",
+    element: <Layout />, // Wrap child routes with Layout containing Navbar
+    children: [
+      { index: true, element: <Home /> }, // Default route for "/"
+      { path: "dashboard", element: <Dashboard /> }, // Relative path for child routes
+      { path: "tasks", element: <Tasks /> },
+    ],
+  },
+]);
 
 // Render the application
 const root = ReactDOM.createRoot(document.getElementById("root"));
