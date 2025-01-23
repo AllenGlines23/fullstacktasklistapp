@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A backend for a task management application using Node.js, Express, and MongoDB.",
   "main": "server.js",
-  "homepage": "https://allenglines23.github.io/fullstacktasklistapp",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
