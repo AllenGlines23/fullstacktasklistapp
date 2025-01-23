@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       path: "/",
       element: <Layout />, // Wrap child routes with Layout containing Navbar
       children: [
-        { path: "/", element: <Home /> },
+        { path: "/home", element: <Home /> },
         { path: "/dashboard", element: <Dashboard /> },
         { path: "/tasks", element: <Tasks /> },
       ],
